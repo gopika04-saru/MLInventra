@@ -1,10 +1,5 @@
 from flask import Flask, request, jsonify
 import joblib
-import datetime
-from prophet import Prophet
-import pandas as pd
-import random
-from datetime import datetime, timedelta
 
 app = Flask(__name__)
 model = joblib.load("price_model.pkl")
@@ -37,4 +32,4 @@ def predict_priority():
 
 
 if __name__ == "__main__":
-    app.run(port=5000, debug=True)
+    app.run(host='0.0.0.0', port=5000)
