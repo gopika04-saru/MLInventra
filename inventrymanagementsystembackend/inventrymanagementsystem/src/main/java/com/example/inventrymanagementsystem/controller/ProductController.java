@@ -147,7 +147,7 @@ public class ProductController {
 
     private double getPredictedPrice(String name, String category) {
         RestTemplate restTemplate = new RestTemplate();
-        String url = "http://localhost:5000/predict-price";
+        String url = "https://ml-model-vvvi.onrender.com/predict-price";
 
         Map<String, String> payload = new HashMap<>();
         payload.put("name", name);
