@@ -24,7 +24,7 @@ public class InquiryService {
 
     public Inquiry saveInquiry(Inquiry inquiry) {
         // Call ML API
-        String flaskUrl = "http://localhost:5000/predict-priority";
+        String flaskUrl = "https://ml-model-vvvi.onrender.com/predict-priority";
         Map<String, String> request = new HashMap<>();
         request.put("message", inquiry.getMessage());
 
