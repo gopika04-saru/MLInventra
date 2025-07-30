@@ -7,13 +7,13 @@ An enhanced full-stack Inventory Management System with AI-powered features like
 
 ## 🧰 Project Description
 
-MLInventra allows administrators to manage inventory while empowering users to suggest new products and raise inquiries. The system uses machine learning models to:
+MLInventra allows administrators to manage inventory while empowering users to suggest new products and raise inquiries. The system uses **machine learning models** to:
 
-- Predict prices for new products (admin or user-suggested)
+- **Predict prices** for new products (admin or user-suggested)
 
-- Automatically classify customer inquiries by priority (High / Medium / Low)
+- **Automatically classify customer inquiries by priority** (High / Medium / Low)
 
-Admins have full control over the inventory, including approval of user-suggested products, which are assigned ML-generated prices.
+Admins have full control over the inventory, including approval of user-suggested products, which are assigned **ML-generated prices**.
 
 
 ## 🚀 Features
@@ -24,14 +24,14 @@ Admins have full control over the inventory, including approval of user-suggeste
 - Low stock highlighting (stock < 10)
 - Dashboard with:
   - Total product count
-  - Low stock count
+  - **Low stock count**
   - Total inventory value
-  - Recent products
+  - **Recent products**
 
 ### 🛍️ Customer Features
 - View all products
 - Search and filter by category
-- Stock visibility
+- **Stock visibility**
 - Inquiry form for each product
 
 ---
@@ -40,12 +40,12 @@ Admins have full control over the inventory, including approval of user-suggeste
 #### Price Prediction
 - Predicts product price based on product name and category.
 
-- Implemented using LinearRegression and TfidfVectorizer.
+- Implemented using **LinearRegression** and TfidfVectorizer.
 
 #### Priority Detection
-- Classifies inquiry messages into High, Medium, or Low priority.
+- **Classifies inquiry messages into High, Medium, or Low priority**.
 
-- Uses logistic regression and natural language text classification.
+- **Uses logistic regression and natural language text classification**.
 
 ##### 🔗 ML Server: Flask app deployed on Render
 - 🔗 /predict-price – Predicts price
