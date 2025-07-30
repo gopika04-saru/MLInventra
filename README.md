@@ -137,15 +137,6 @@ npm install
 npm run dev
 ```
 
-## 📸 Output Screenshots
-
-![Home](assets/home1.png)
-![Home](assets/home2.png)
-![Home](assets/home3.png)
-![Add Product](assets/add.png)
-![Admin Dashboard](assets/admin.png)
-![customer page](assets/customer.png)
-
 ## 🎥 Demo Video
 
 > 📽️ Watch the project in action below
@@ -155,13 +146,8 @@ npm run dev
 > If it doesn't auto-play in your browser, download and play it manually.
 
 ## 👨‍💻 Developed By
-- This project is a collaborative team project developed for learning and real-world application.
-### 👥 Team Members
 
 - K Gopika Saranya                (kotakalagopika@gmail.com)
-- Abhishek Tiwari                 (at411413@gmail.com)
-- Nitin Jadhav                    (nitinjadhav882003@gmail.com)
-- Meghana Krishnaveni Mallipudi   (m.meghanakrishnaveni@gmail.com)
 
 👏 Special thanks to everyone involved in planning, building, and testing this system.
 
