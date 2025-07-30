@@ -18,10 +18,6 @@ public class Product {
     private int quantity;
     private String imageUrl;
 
-    private String predictedDate;
-    private Integer predictedDays;
-    private Double predictedQuantity;
-
     public Long getId() {
         return id;
     }
@@ -71,28 +67,6 @@ public class Product {
         this.imageUrl = imageUrl;
     }
 
-    public String getPredictedDate() {
-        return predictedDate;
-    }
-    public void setPredictedDate(String predictedDate) {
-        this.predictedDate = predictedDate;
-    }
-
-
-    public Integer getPredictedDays() {
-        return predictedDays;
-    }
-    public void setPredictedDays(Integer predictedDays) {
-        this.predictedDays = predictedDays;
-    }
-
-    public Double getPredictedQuantity() {
-        return predictedQuantity;
-    }
-    public void setPredictedQuantity(Double predictedQuantity) {
-        this.predictedQuantity = predictedQuantity;
-    }
-
     @Override
     public String toString() {
         return "Product{" +
@@ -103,9 +77,6 @@ public class Product {
                 ", price=" + price +
                 ", quantity=" + quantity +
                 ", imageUrl='" + imageUrl + '\'' +
-                ", predictedDate='" + predictedDate + '\'' +
-                ", predictedDays=" + predictedDays +
-                ", predictedQuantity=" + predictedQuantity +
                 '}';
     }
 }
