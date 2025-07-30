@@ -42,7 +42,7 @@ export function EditProductModal({ product, open, onOpenChange }: EditProductMod
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     try {
-      await axios.put(`http://localhost:8080/api/products/${product.id}`, {
+      await axios.put(`https://mlinventra.onrender.com/api/products/${product.id}`, {
         ...formData,
         price: parseFloat(formData.price),
         stock: parseInt(formData.stock),

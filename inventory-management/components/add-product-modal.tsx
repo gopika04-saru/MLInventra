@@ -28,7 +28,7 @@ export function AddProductModal({ open, onOpenChange }: AddProductModalProps) {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     try {
-      await axios.post("http://localhost:8080/api/products", {
+      await axios.post("https://mlinventra.onrender.com/api/products", {
         name: formData.name,
         description: formData.description,
         category: formData.category,

@@ -54,28 +54,28 @@ export function AdminDashboard({ onNavigate }: AdminDashboardProps) {
   const [totalValue, setTotalValue] = useState(0)
 
   useEffect(() => {
-    fetch("http://localhost:8080/api/products/count")
+    fetch("https://mlinventra.onrender.com/api/products/count")
       .then((res) => res.json())
       .then(setTotalProducts)
 
-    fetch("http://localhost:8080/api/products/stock/low/count")
+    fetch("https://mlinventra.onrender.com/api/products/stock/low/count")
       .then((res) => res.json())
       .then(setLowStockCount)
 
-    fetch("http://localhost:8080/api/products/total-value")
+    fetch("https://mlinventra.onrender.com/api/products/total-value")
       .then((res) => res.json())
       .then(setTotalValue)
   }, [])
 
   useEffect(() => {
-    let url = "http://localhost:8080/api/products"
+    let url = "https://mlinventra.onrender.com/api/products"
 
     if (searchTerm) {
-      url = `http://localhost:8080/api/products/search?name=${searchTerm}`
+      url = `https://mlinventra.onrender.com/api/products/search?name=${searchTerm}`
     } else if (categoryFilter !== "all") {
-      url = `http://localhost:8080/api/products/category/${categoryFilter}`
+      url = `https://mlinventra.onrender.com/api/products/category/${categoryFilter}`
     } else if (stockFilter !== "all") {
-      url = `http://localhost:8080/api/products/stock?level=${stockFilter}`
+      url = `https://mlinventra.onrender.com/api/products/stock?level=${stockFilter}`
     }
 
     fetch(url)
@@ -86,7 +86,7 @@ export function AdminDashboard({ onNavigate }: AdminDashboardProps) {
 
   useEffect(() => {
     if (activeTab === "inquiries") {
-      fetch("http://localhost:8080/api/inquiries")
+      fetch("https://mlinventra.onrender.com/api/inquiries")
         .then((res) => res.json())
         .then(setInquiries)
         .catch((err) => console.error("Failed to fetch inquiries:", err))
@@ -94,7 +94,7 @@ export function AdminDashboard({ onNavigate }: AdminDashboardProps) {
   }, [activeTab])
 
   useEffect(() => {
-    fetch("http://localhost:8080/api/products/pending")
+    fetch("https://mlinventra.onrender.com/api/products/pending")
       .then((res) => res.json())
       .then(setPendingProducts)
       .catch(() => alert("Failed to fetch pending approvals"))
@@ -111,7 +111,7 @@ export function AdminDashboard({ onNavigate }: AdminDashboardProps) {
   };
   const submitAcceptProduct = async () => {
     try {
-      const response = await fetch(`http://localhost:8080/api/products/accept/${selectedProductId}`, {
+      const response = await fetch(`https://mlinventra.onrender.com/api/products/accept/${selectedProductId}`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -142,7 +142,7 @@ export function AdminDashboard({ onNavigate }: AdminDashboardProps) {
 
   const rejectProduct = async (id:number) => {
     try {
-      const response = await fetch(`http://localhost:8080/api/products/reject/${id}`, {
+      const response = await fetch(`https://mlinventra.onrender.com/api/products/reject/${id}`, {
         method: 'POST',
       });
       if (response.ok) {
@@ -166,7 +166,7 @@ export function AdminDashboard({ onNavigate }: AdminDashboardProps) {
   const [recentProducts, setRecentProducts] = useState<any[]>([])
 
   useEffect(() => {
-    fetch("http://localhost:8080/api/products/recent?limit=6")
+    fetch("https://mlinventra.onrender.com/api/products/recent?limit=6")
       .then((res) => res.json())
       .then(setRecentProducts)
   }, [])
@@ -174,7 +174,7 @@ export function AdminDashboard({ onNavigate }: AdminDashboardProps) {
   const handleDelete = (id: number) => {
     if (!confirm("Are you sure you want to delete this product?")) return
 
-    fetch(`http://localhost:8080/api/products/${id}`, {
+    fetch(`https://mlinventra.onrender.com/api/products/${id}`, {
       method: "DELETE",
     })
       .then((res) => {

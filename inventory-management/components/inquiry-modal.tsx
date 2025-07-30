@@ -39,7 +39,7 @@ export function InquiryModal({ open, onOpenChange, product }: InquiryModalProps)
     }
 
     try {
-      const res = await fetch("http://localhost:8080/api/inquiries", {
+      const res = await fetch("https://mlinventra.onrender.com/api/inquiries", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

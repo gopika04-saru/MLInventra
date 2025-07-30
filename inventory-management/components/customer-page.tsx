@@ -43,7 +43,7 @@ export function CustomerPage({ onNavigate }: CustomerPageProps) {
   const [selectedProduct, setSelectedProduct] = useState<Product | null>(null)
 
   useEffect(() => {
-    fetch("http://localhost:8080/api/products")
+    fetch("https://mlinventra.onrender.com/api/products")
       .then((res) => res.json())
       .then((data) => setProducts(data))
       .catch((err) => console.error("Failed to fetch products:", err))
@@ -63,11 +63,11 @@ export function CustomerPage({ onNavigate }: CustomerPageProps) {
   const handleSearchChange = (value: string) => {
     setSearchTerm(value)
     if (value.trim() === "") {
-      fetch("http://localhost:8080/api/products")
+      fetch("https://mlinventra.onrender.com/api/products")
         .then((res) => res.json())
         .then((data) => setProducts(data))
     } else {
-      fetch(`http://localhost:8080/api/products/search?name=${value}`)
+      fetch(`https://mlinventra.onrender.com/api/products/search?name=${value}`)
         .then((res) => res.json())
         .then((data) => setProducts(data))
     }
@@ -76,11 +76,11 @@ export function CustomerPage({ onNavigate }: CustomerPageProps) {
   const handleCategoryChange = (value: string) => {
     setCategoryFilter(value)
     if (value === "all") {
-      fetch("http://localhost:8080/api/products")
+      fetch("https://mlinventra.onrender.com/api/products")
         .then((res) => res.json())
         .then((data) => setProducts(data))
     } else {
-      fetch(`http://localhost:8080/api/products/category/${value}`)
+      fetch(`https://mlinventra.onrender.com/api/products/category/${value}`)
         .then((res) => res.json())
         .then((data) => setProducts(data))
     }
@@ -248,7 +248,7 @@ export function CustomerPage({ onNavigate }: CustomerPageProps) {
               onSubmit={async (e) => {
                 e.preventDefault();
                 try {
-                  const response = await fetch("http://localhost:8080/api/user-products", {
+                  const response = await fetch("https://mlinventra.onrender.com/api/user-products", {
                     method: "POST",
                     headers: {
                       "Content-Type": "application/json",
