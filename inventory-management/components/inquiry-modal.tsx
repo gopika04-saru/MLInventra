@@ -80,7 +80,7 @@ export function InquiryModal({ open, onOpenChange, product }: InquiryModalProps)
             <div className="p-3 bg-gradient-to-r from-purple-50 to-pink-50 rounded-lg border border-purple-100">
               <div className="flex items-center gap-3">
                 <img
-                  src={product.image || "/placeholder.svg"}
+                  src={product.imageUrl || "/placeholder.svg"}
                   alt={product.name}
                   className="w-10 h-10 rounded-lg object-cover"
                 />
